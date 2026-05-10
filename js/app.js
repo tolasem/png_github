@@ -24,12 +24,12 @@ search.addEventListener("input", () => {
   render(photos.filter(p => p.title.toLowerCase().includes(val)));
 });
 
-// function download(url) {
-//   const a = document.createElement("a");
-//   a.href = url;
-//   a.download = "photo.png";
-//   a.click();
-// }
+/*function download(url) {
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "photo.png";
+  a.click();
+}*/
 
 function render(data) {
   gallery.innerHTML = "";

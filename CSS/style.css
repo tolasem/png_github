@@ -30,25 +30,39 @@ nav a {
   
 }
 
-.controls {
-  text-align: center;
-  margin: 20px;
-}
-
-.gallery {
+#gallery{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
   padding: 20px;
 }
 
-.card {
-  background: white;
-  padding: 10px;
-  border-radius: 10px;
+.card{
+  border: 2px solid #ccc;
+  padding-bottom: 50px;
+  border-radius: 20px;
   text-align: center;
 }
 
-.card img {
+.card img{
   width: 100%;
+  object-fit: cover;
+}
+
+.controls{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+#search{
+  padding: 10px;
+  flex: 1;
+  min-width: 100px;
+}
+
+button{
+  padding: 5px 10px;
+  cursor: pointer;
 }
