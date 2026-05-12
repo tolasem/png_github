@@ -356,6 +356,5 @@ const photos = [
     imageUrl: "assets/images/all/72_Zelda-Christmas-Whimsical-Holiday-Spirit-PNG.png" 
   },
 
-
   
 ];
