@@ -43,12 +43,12 @@ const photos = [
   { id: 9, 
     title: "full pink cake", 
     category: "Birthday", 
-    imageUrl: "assets/images/a//9_full pink cake.png" 
+    imageUrl: "assets/images/all/9_full pink cake.png" 
   },
   { id: 10, 
     title: "Black-Pullover-PNG-Images", 
     category: "All", 
-    imageUrl: "assets/images/a//10_Black-Pullover-PNG-Images.png" 
+    imageUrl: "assets/images/all/10_Black-Pullover-PNG-Images.png" 
   },
   { id: 11, 
     title: "Hart", 
