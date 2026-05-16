@@ -9,6 +9,8 @@ header {
   padding: 10px;
   display: flex;
   justify-content: space-between;
+  /* Keep logo and nav links centered in the header. */
+  align-items: center;
 }
 
 .logo {
@@ -25,9 +27,25 @@ nav a {
   color: rgb(255, 255, 255);
   margin: 5px;
   margin-left: 15px;
+  padding: 8px 12px;
+  border-radius: 8px;
   text-decoration: none;
   text-align: center;
-  
+  /* Make nav hover color change smoothly. */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover{
+  /* Professional hover style for nav links. */
+  background-color: white;
+  color: #0023af;
+}
+
+nav{
+  /* Put nav links in the center like the logo text. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #gallery{
@@ -42,11 +60,61 @@ nav a {
   padding-bottom: 50px;
   border-radius: 20px;
   text-align: center;
+  /* Hide image part that grows outside the card when hover zoom happens. */
+  overflow: hidden;
+}
+
+.image-box{
+  /* Checkerboard background helps you see transparent PNG image areas. */
+  background-color: white;
+  background-image:
+    linear-gradient(45deg, #e6e6e6 25%, transparent 25%),
+    linear-gradient(-45deg, #e6e6e6 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #e6e6e6 75%),
+    linear-gradient(-45deg, transparent 75%, #e6e6e6 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+  overflow: hidden;
 }
 
 .card img{
   width: 100%;
   object-fit: cover;
+  display: block;
+  /* Make the image zoom smoothly, not suddenly. */
+  transition: transform 0.3s ease;
+}
+
+.card:hover img{
+  /* Zoom image in when the mouse is on the card. */
+  transform: scale(1.1);
+}
+
+.gallery-icon a{
+  display: block;
+  border-radius: 20px;
+  /* Keep category image zoom inside the rounded box. */
+  overflow: hidden;
+  /* Checkerboard background helps you see transparent PNG category images. */
+  background-color: white;
+  background-image:
+    linear-gradient(45deg, #e6e6e6 25%, transparent 25%),
+    linear-gradient(-45deg, #e6e6e6 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #e6e6e6 75%),
+    linear-gradient(-45deg, transparent 75%, #e6e6e6 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+}
+
+.gallery-icon img{
+  display: block;
+  /* Make category image zoom smoothly. */
+  transition: transform 0.3s ease;
+}
+
+.gallery-icon a:hover img{
+  /* Zoom category image in when the mouse is on it. */
+  transform: scale(1.1);
 }
 
 .controls{
@@ -65,4 +133,32 @@ nav a {
 button{
   padding: 5px 10px;
   cursor: pointer;
+}
+
+@media (max-width: 600px){
+  #gallery{
+    /* On mobile screen, show image cards as 2 columns grid. */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .card{
+    padding-bottom: 20px;
+  }
+
+  .card h3{
+    font-size: 16px;
+  }
+
+  #gallery-1{
+    /* On mobile screen, show category images as 2 columns grid. */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  #gallery-1 img{
+    width: 100%;
+    height: auto;
+  }
 }

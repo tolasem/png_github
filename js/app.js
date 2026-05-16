@@ -17,7 +17,9 @@ function render(data) {
   data.forEach(p => {
     gallery.innerHTML += `
       <div class="card">
-        <img src="${p.imageUrl}">
+        <div class="image-box">
+          <img src="${p.imageUrl}">
+        </div>
         <h3>${p.title}</h3>
         <button onclick="download('${p.imageUrl}', '${p.title}')">Download</button>
       </div>

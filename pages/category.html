@@ -37,24 +37,38 @@
 
 <div class="entry-content">
 <style type="text/css">
-			#gallery-1 {
+#gallery-1 {
     margin: auto;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 15px;
 }
 
-#gallery-1 img {
-    width: 200px;
-    height: 200px;
+#gallery-1 .gallery-item {
+    /* Make each category item look like the image cards on index page. */
     border: 2px solid #ccc;
     border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+    padding-bottom: 15px;
+    margin: 0;
+}
+
+#gallery-1 img {
+    /* Make image fill the top of the card. */
+    width: 100%;
+    height: 200px;
     display: block;
+    object-fit: cover;
 }
 
 #gallery-1 .gallery-caption {
-    text-align: start;
-    margin-top: 5px;
+    /* Remove default left space from dd tag so title can be true center. */
+    margin-left: 0;
+    margin-right: 0;
+    /* Center category title under each image. */
+    text-align: center;
+    margin-top: 10px;
 }
 
 @media (max-width: 768px) {
@@ -65,7 +79,7 @@
 
 @media (max-width: 480px) {
     #gallery-1 {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 		</style>
