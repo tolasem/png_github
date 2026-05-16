@@ -1,5 +1,5 @@
 const photos = [
-  
+
   { id: 1, 
     title: "Alphabet-A", 
     category: "All", 
